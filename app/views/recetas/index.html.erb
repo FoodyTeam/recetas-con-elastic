@@ -1,0 +1,18 @@
+<h1>Recetas</h1>
+ 
+<ul>
+  <% @recetas.each do |receta| %>
+    <li>
+      <h3>
+        <%= receta.titulo %>
+      </h3>
+      <p>
+        <%= receta.ingredientes %>
+      </p>
+       <p>
+        <%= receta.modo_preparacion %>
+      </p>
+    </li>
+  <% end -%>
+</ul>
+<%= link_to 'Nueva Receta', new_receta_path %>
